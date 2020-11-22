@@ -1,9 +1,4 @@
-package com.leetcode.algorithm.medium;
-
-import com.sun.org.apache.bcel.internal.generic.LNEG;
-
-import java.util.List;
-import java.util.concurrent.TimeoutException;
+package com.leetcode.algorithm.linkedlist;
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers.
@@ -22,7 +17,7 @@ class ListNode{
 public class AndTwoNumbers {
         public static ListNode addTwoNumbers(ListNode p1, ListNode p2){
             ListNode dummyHead = new ListNode(0);
-            ListNode p =p1, q = p2, curr = dummyHead;
+            ListNode p =p1, q = p2, curr = dummyHead;// 第三个链表合并两个链表
             int carry = 0;
             while (p != null || q != null){
                 int x = (p != null) ? p.val : 0;
