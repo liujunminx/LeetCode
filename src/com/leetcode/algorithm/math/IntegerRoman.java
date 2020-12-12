@@ -4,22 +4,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IntegerRoman {
-    private static Map<String, Integer> hashMap = new HashMap<String, Integer>(){{
-        put("I", 1);
-        put("V", 5);
-        put("X", 10);
-        put("L", 50);
-        put("C", 100);
-        put("D", 500);
-        put("M", 1000);
-    }};
+    private static final int[] value = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    private static final String[] symbol = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
     public static String intToRoman(int num){
-        System.out.println(hashMap.get(hashMap.size() - 1));
-        return "";
+        int len = value.length;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < len; i++){
+            while (num >= value[i]){
+                sb.append(symbol[i]);
+                num -= value[i];
+            }
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-        intToRoman(100);
+        System.out.println(intToRoman(999));
     }
 }
