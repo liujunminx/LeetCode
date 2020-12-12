@@ -1,5 +1,8 @@
 package com.leetcode.concurrency;
 
+/**
+ * wait/notify 信号量实现
+ */
 public class PrintInOrder {
     boolean first = false;
     boolean second = false;
