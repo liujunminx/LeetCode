@@ -7,13 +7,6 @@ package com.leetcode.algorithm.linkedlist;
  *
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  */
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(){}
-    ListNode(int val){this.val = val;}
-    ListNode(int val, ListNode next){this.val = val; this.next = next;}
-}
 public class AndTwoNumbers {
         public static ListNode addTwoNumbers(ListNode p1, ListNode p2){
             ListNode dummyHead = new ListNode(0);
