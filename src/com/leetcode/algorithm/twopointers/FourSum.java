@@ -9,6 +9,7 @@ public class FourSum {
         Arrays.sort(nums);
         return kSum(nums, target, 0, 4);
     }
+
     public List<List<Integer>> kSum(int[] nums, int target, int start, int k) {
         List<List<Integer>> res = new ArrayList<>();
         if (start == nums.length || nums[start] * k > target || target > nums[nums.length - 1] * k)
@@ -23,6 +24,7 @@ public class FourSum {
                 }
         return res;
     }
+
     public List<List<Integer>> twoSum(int[] nums, int target, int start) {
         List<List<Integer>> res = new ArrayList<>();
         int lo = start, hi = nums.length - 1;

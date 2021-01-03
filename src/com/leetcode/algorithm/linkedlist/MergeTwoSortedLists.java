@@ -1,28 +1,28 @@
 package com.leetcode.algorithm.linkedlist;
 
 public class MergeTwoSortedLists {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode a = l1;
         ListNode b = l2;
         ListNode res = new ListNode(0);
         ListNode p = res;
-        while (a != null && b != null){
-            if (a.val <= b.val){
+        while (a != null && b != null) {
+            if (a.val <= b.val) {
                 p.next = a;
                 a = a.next;
                 p = p.next;
-            }else {
+            } else {
                 p.next = b;
                 b = b.next;
                 p = p.next;
             }
         }
-        while (a != null){
+        while (a != null) {
             p.next = a;
             p = p.next;
             a = a.next;
         }
-        while (b != null){
+        while (b != null) {
             p.next = b;
             p = p.next;
             b = b.next;
@@ -30,22 +30,22 @@ public class MergeTwoSortedLists {
         return res.next;
     }
 
-    public ListNode mergeTwoSorts01(ListNode l1, ListNode l2){
+    public ListNode mergeTwoSorts01(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(Integer.MIN_VALUE);
         ListNode tail = dummy;
-        while (tail != null){
-            if (l1 == null){
+        while (tail != null) {
+            if (l1 == null) {
                 tail.next = l2;
                 break;
             }
-            if (l2 == null){
+            if (l2 == null) {
                 tail.next = l1;
                 break;
             }
-            if (l1.val <= l2.val){
+            if (l1.val <= l2.val) {
                 tail.next = l1;
                 l1 = l1.next;
-            }else {
+            } else {
                 tail.next = l2;
                 l2 = l2.next;
             }

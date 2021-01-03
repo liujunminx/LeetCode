@@ -11,14 +11,15 @@ package com.leetcode.algorithm.twopointers;
 public class ContainerWithMostWater {
     /**
      * 暴力遍历法
+     *
      * @param height
      * @return
      */
-    public static int maxArea(int[] height){
+    public static int maxArea(int[] height) {
         int result = 0;
-        for (int i = 0; i < height.length; i++){
+        for (int i = 0; i < height.length; i++) {
             int left = height[i];
-            for (int j = i + 1; j < height.length; j++){
+            for (int j = i + 1; j < height.length; j++) {
                 int high = Math.min(left, height[j]);
                 int width = j - i;
                 int area = high * width;
@@ -31,13 +32,14 @@ public class ContainerWithMostWater {
 
     /**
      * 双指针
+     *
      * @param height
      * @return
      */
-    public static int maxArea1(int[] height){
+    public static int maxArea1(int[] height) {
         int maxArea = 0, left = 0, right = height.length - 1;
         // 两个指针
-        while (left < right){
+        while (left < right) {
             maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
             if (height[left] < height[right])// 最小的一块向内部移动
                 left++;

@@ -19,15 +19,15 @@ public class RomanToInteger {
         map.put('I', 1);
     }
 
-    public static int romanToInt(String s){
+    public static int romanToInt(String s) {
         int i = s.length() - 1;
         int sum = 0;
-        while (i > 0){
+        while (i > 0) {
             int curr = map.get(s.charAt(i));
             int prev = map.get(s.charAt(i - 1));
             sum += curr;
             i--;
-            if (curr > prev){
+            if (curr > prev) {
                 sum -= prev;
                 i--;
             }

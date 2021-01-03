@@ -5,17 +5,17 @@ import java.util.List;
 
 /**
  * Example 1:
- *
+ * <p>
  * Input: n = 3
  * Output: ["((()))","(()())","(())()","()(())","()()()"]
  * Example 2:
- *
+ * <p>
  * Input: n = 1
  * Output: ["()"]
  */
 public class GenerateParentheses {
-    public void backtrace(List<String> ans, String cur, int open, int close, int max){
-        if (cur.length() == max * 2){
+    public void backtrace(List<String> ans, String cur, int open, int close, int max) {
+        if (cur.length() == max * 2) {
             ans.add(cur);
             return;
         }
@@ -25,7 +25,7 @@ public class GenerateParentheses {
             backtrace(ans, cur + ")", open, close + 1, max);
     }
 
-    public List<String> generateParenthesis(int n){
+    public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
         backtrace(ans, "", 0, 0, n);
         return ans;
