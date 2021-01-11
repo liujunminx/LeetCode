@@ -18,7 +18,7 @@ public class Combinations {
             res.add(new ArrayList<>(currentList));// 必须要新建一个数组
             return;
         }
-        int initialValue = currentValue + listSize - 1 - currentList.size();// 动态比较
+        int initialValue = currentValue + listSize - 1 - currentList.size();// 由当前数组动态比较大小
         for (int i = currentValue; i <= maximumValue && initialValue <= maximumValue; i++){
             currentList.add(i);
             backtrack(currentList, i + 1, maximumValue, listSize);
