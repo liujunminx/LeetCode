@@ -32,5 +32,7 @@ public class SubsetsII {
         };
         List<List<Integer>> res = new SubsetsII().subsetsWithDup(nums);
         System.out.println(res);
+        StringBuffer stringBuffer;
+        StringBuilder stringBuilder;
     }
 }
