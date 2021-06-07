@@ -41,7 +41,7 @@ public class FindMaxForm {
             int zeros = getZerosOnes(strs[i-1])[0];
             int ones = getZerosOnes(strs[i-1])[1];
             for (int j = 0; j <= m; j++) {
-                for (int k = 0; k <= n; k++){
+                for (int k = 0; k <= n; k++) {
                     dp[i][j][k] = dp[i-1][j][k];
                     if (j >= zeros && k >= ones) {
                         dp[i][j][k] = Math.max(dp[i][j][k], dp[i-1][j-zeros][k-ones] + 1);
