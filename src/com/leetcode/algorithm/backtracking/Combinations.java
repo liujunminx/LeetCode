@@ -29,5 +29,6 @@ public class Combinations {
     public static void main(String[] args) {
         new Combinations().combine(4, 2);
         System.out.println(res.toString());
+        ThreadLocal threadLocal;
     }
 }
